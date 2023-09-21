@@ -3,7 +3,6 @@
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 sudo apt-get autoremove -y
-sudo apt-get install curl -y
-curl -fsSL https://test.docker.com | sudo sh
+wget -qO - https://test.docker.com | sudo sh
 sudo usermod -aG docker vagrant
 sudo systemctl enable docker.service
